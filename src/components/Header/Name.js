@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Name extends Component {
+class Name extends Component {
 
     render() {
         return (
@@ -10,3 +11,11 @@ export default class Name extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    //OR return state
+    return {
+        user: state.user
+    }
+}
+export default connect(mapStateToProps)(Name)

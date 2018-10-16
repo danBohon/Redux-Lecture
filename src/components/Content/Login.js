@@ -10,11 +10,12 @@ export default class Login extends Component {
 
 
     render() {
+        const {loginUser} = this.props
         return (
             <div>
                 <h1>Login!</h1>
                 <input value={this.state.name} onChange={(e) => this.setState({name: e.target.value})}/>
-                <button onClick={() => this.props.login(this.state.name)}>Submit</button>
+                <button onClick={() => loginUser(this.state.name)}>Submit</button>
             </div>
         );
     }
